@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
+    <persistence-unit name="course">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>entity.DragonEntity</class>
+        <class>entity.EmployeeEntity</class>
+        <class>entity.EntriesEntity</class>
+        <class>entity.ExcursionEntity</class>
+        <class>entity.ScheduleEntity</class>
+        <properties>
+            <property name="connection.url" value="jdbc:postgresql://localhost:64947/studs" />
+            <property name="connection.driver_class" value="org.postgresql.Driver"/>
+
+            <property name="connection.username" value="s223860"/>
+            <property name="connection.password" value="7PDznrjm"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL81Dialect"/>
+        </properties>
+    </persistence-unit>
+</persistence>
