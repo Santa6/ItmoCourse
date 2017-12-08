@@ -4,4 +4,12 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/ejb-jar_3_1.xsd"
          version="3.1">
+    <enterprise-beans>
+        <session>
+            <ejb-name>DBInterfaceEJB</ejb-name>
+            <ejb-class>com.beans.DBInterfaceBean</ejb-class>
+            <session-type>Stateful</session-type>
+            <transaction-type>Container</transaction-type>
+        </session>
+    </enterprise-beans>
 </ejb-jar>

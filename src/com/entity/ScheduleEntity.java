@@ -5,8 +5,10 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "schedule", schema = "s223860", catalog = "studs")
+@NamedQuery(name="Schedule.GetAll", query = "select excursions from ScheduleEntity excursions")
 public class ScheduleEntity {
     private int id;
+    private String name;
     private Timestamp beginning;
     private Timestamp ending;
     private int excursionId;
@@ -21,6 +23,16 @@ public class ScheduleEntity {
 
     public void setId(int id) {
         this.id = id;
+    }
+
+    @Basic
+    @Column(name="name", nullable = false)
+    public String getName(){
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Basic

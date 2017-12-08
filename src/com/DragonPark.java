@@ -6,7 +6,7 @@ import com.vaadin.ui.*;
 public class DragonPark extends UI {
     @Override
     public void init(VaadinRequest request) {
-        VerticalLayout layout = new VerticalLayout();
+        final VerticalLayout layout = new VerticalLayout();
         setContent(layout);
         layout.addComponent(new Label("Hello, world!"));
     }
