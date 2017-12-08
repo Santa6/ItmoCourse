@@ -79,6 +79,8 @@
       <root url="jar://$USER_HOME$/Documents/vaadin-all-8/lib/jsinterop-annotations-1.0.1-sources.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/Documents/vaadin-all-8/vaadin-server-8.1.5.jar!/" />
+    </SOURCES>
   </library>
 </component>
