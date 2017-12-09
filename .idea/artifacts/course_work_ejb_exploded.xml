@@ -4,6 +4,10 @@
     <root id="root">
       <element id="javaee-facet-resources" facet="course work/ejb/EJB" />
       <element id="module-output" name="course work" />
+      <element id="jpa-descriptors" facet="course work/jpa/JPA" />
+      <element id="library" level="project" name="Hibernate 5.2.12-5.2.12" />
+      <element id="library" level="project" name="JPA 2.1-2.1" />
+      <element id="library" level="project" name="postgresql-42.1.4" />
     </root>
   </artifact>
 </component>

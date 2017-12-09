@@ -3,7 +3,7 @@ package com.entity;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "dragon", schema = "s223860", catalog = "studs")
+@Table(name = "dragon", schema = "s225127", catalog = "studs")
 @NamedQuery(name="Dragons.GetAll", query = "select dragons from DragonEntity dragons")
 public class DragonEntity {
     private int id;

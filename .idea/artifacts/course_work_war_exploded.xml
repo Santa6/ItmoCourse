@@ -12,6 +12,8 @@
           <element id="library" level="project" name="JPA 2.1-2.1" />
           <element id="library" level="project" name="postgresql-42.1.4" />
           <element id="library" level="project" name="Java EE 6-Java EE 6" />
+          <element id="library" level="project" name="vaadin-cdi-2.0.0-javadoc" />
+          <element id="library" level="project" name="Hibernate 5.2.12-5.2.12" />
         </element>
       </element>
     </root>

@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
-@Table(name = "schedule", schema = "s223860", catalog = "studs")
+@Table(name = "schedule", schema = "s225127", catalog = "studs")
 @NamedQuery(name="Schedule.GetAll", query = "select excursions from ScheduleEntity excursions")
 public class ScheduleEntity {
     private int id;

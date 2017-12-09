@@ -2,17 +2,21 @@ package com.beans;
 
 import com.JPAUtil;
 import com.entity.*;
-
 import javax.ejb.Stateful;
 import javax.persistence.EntityManager;
+import java.io.Serializable;
 import java.util.List;
 
 @Stateful(name = "DBInterfaceEJB")
-public class DBInterfaceBean {
+public class DBInterfaceBean implements DBInterface, Serializable{
     private EntityManager entityManager;
 
     public DBInterfaceBean() {
         entityManager = new JPAUtil().getFactory();
+    }
+
+    public List getAllExcursions(){
+        return entityManager.createNamedQuery("Excursions.GetAll").getResultList();
     }
 
     public List getAllSessions(){
