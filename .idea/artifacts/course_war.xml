@@ -1,0 +1,16 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="course:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/course_war</output-path>
+    <root id="archive" name="course_war.war">
+      <element id="artifact" artifact-name="course:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Hibernate 5.2.12-5.2.12" />
+        </element>
+        <element id="directory" name="classes">
+          <element id="jpa-descriptors" facet="course work/jpa/JPA" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>

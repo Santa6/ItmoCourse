@@ -1,15 +1,13 @@
 package com;
 
 import com.beans.DBInterface;
-import com.beans.DBInterfaceBean;
 import com.entity.ExcursionEntity;
 import com.vaadin.server.VaadinRequest;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Grid;
-import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
+
 import javax.ejb.EJB;
-import java.util.List;
 
 
 public class DragonPark extends UI{
