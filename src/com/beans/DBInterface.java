@@ -1,8 +1,16 @@
 package com.beans;
 
+import javax.annotation.PostConstruct;
+import javax.ejb.Local;
 import java.util.List;
 
+
+@Local
 public interface DBInterface {
+
+    @PostConstruct
+    void init();
+
     List getAllExcursions();
 
     List getAllSessions();

@@ -1,32 +1,34 @@
 package com;
 
 import com.beans.DBInterface;
-import com.vaadin.annotations.VaadinServletConfiguration;
+import com.beans.DBInterfaceBean;
+import com.entity.ExcursionEntity;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.server.VaadinServlet;
-import com.vaadin.ui.HorizontalSplitPanel;
+import com.vaadin.ui.Button;
+import com.vaadin.ui.Grid;
 import com.vaadin.ui.Label;
 import com.vaadin.ui.UI;
 import javax.ejb.EJB;
-import javax.servlet.annotation.WebServlet;
+import java.util.List;
 
 
-public class DragonPark extends UI {
+public class DragonPark extends UI{
+
+    private Grid<ExcursionEntity> excursionGrid = new Grid<>(ExcursionEntity.class);
+
+
+    @EJB//(lookup = "java:global/course_war/DBInterfaceBean!com.beans.DBInterface")
+    private static DBInterface dbInterface;
+
     @Override
     public void init(VaadinRequest request) {
-        HorizontalSplitPanel panel = new HorizontalSplitPanel(null, new Label("Hello, world!"));
-        setContent(panel);
-
+        getPage().setTitle("Dragon Park");
+        setContent(new Button("Hey!", event -> Call()));
     }
 
-    @WebServlet(value = "/test")
-    @VaadinServletConfiguration(productionMode = false, ui = DragonPark.class)
-    public static class MainPageServlet extends VaadinServlet{
-        @EJB
-        private DBInterface DBInterface;
-
-        public com.beans.DBInterface getDBInterface() {
-            return DBInterface;
-        }
+    private void Call(){
+        dbInterface.getAllExcursions();
     }
+
+
 }

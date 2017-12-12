@@ -2,16 +2,24 @@ package com.beans;
 
 import com.JPAUtil;
 import com.entity.*;
-import javax.ejb.Stateful;
+
+
+import javax.annotation.PostConstruct;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import java.io.Serializable;
 import java.util.List;
 
-@Stateful(name = "DBInterfaceEJB")
-public class DBInterfaceBean implements DBInterface, Serializable{
+@Stateless
+public class DBInterfaceBean implements Serializable, DBInterface{
     private EntityManager entityManager;
 
-    public DBInterfaceBean() {
+    public DBInterfaceBean(){
+        entityManager = new JPAUtil().getFactory();
+    }
+
+    @PostConstruct
+    public void init(){
         entityManager = new JPAUtil().getFactory();
     }
 
