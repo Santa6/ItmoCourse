@@ -6,6 +6,7 @@ import com.vaadin.data.provider.QuerySortOrder;
 import org.apache.deltaspike.data.api.EntityRepository;
 
 import javax.ejb.Stateless;
+import javax.inject.Inject;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Stream;

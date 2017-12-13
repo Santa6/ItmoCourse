@@ -52,5 +52,6 @@
     <orderEntry type="library" name="org.postgresql:postgresql:42.1.4" level="project" />
     <orderEntry type="library" name="com.vaadin:vaadin-cdi:2.0.0" level="project" />
     <orderEntry type="library" name="Deltaspike 1.8.0" level="project" />
+    <orderEntry type="library" name="javax.inject:javax.inject:1" level="project" />
   </component>
 </module>
