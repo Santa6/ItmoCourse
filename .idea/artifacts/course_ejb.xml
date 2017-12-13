@@ -1,9 +1,0 @@
-<component name="ArtifactManager">
-  <artifact type="ejb-jar" name="course:ejb">
-    <output-path>$PROJECT_DIR$/out/artifacts/course_ejb</output-path>
-    <root id="archive" name="course_ejb.jar">
-      <element id="artifact" artifact-name="course:ejb exploded" />
-      <element id="library" level="project" name="Hibernate 5.2.12-5.2.12" />
-    </root>
-  </artifact>
-</component>

@@ -1,7 +1,7 @@
 package com.beans;
 
 import com.JPAUtil;
-import com.entity.*;
+import com.backend.data.entity.*;
 
 
 import javax.annotation.PostConstruct;
@@ -11,7 +11,7 @@ import java.io.Serializable;
 import java.util.List;
 
 @Stateless
-public class DBInterfaceBean implements Serializable, DBInterface{
+public class DBInterfaceBean implements Serializable{
     private EntityManager entityManager;
 
     public DBInterfaceBean(){
@@ -66,17 +66,17 @@ public class DBInterfaceBean implements Serializable, DBInterface{
 
     public boolean removeRowFromTable(int id, String entityName){
         return entityManager.createQuery("delete from " + entityName + " t where t.id=:id")
-                         .setParameter("id", id).executeUpdate() == 0;
+                .setParameter("id", id).executeUpdate() == 0;
     }
 
     public List getSessionsByExcursionId(int excursion_id){
         return entityManager.createQuery("from ScheduleEntity s where s.excursionId = :excursion_id")
-                            .setParameter("excursion_id", excursion_id).getResultList();
+                .setParameter("excursion_id", excursion_id).getResultList();
     }
 
     public List getSessionsByGuideId(int guide_id){
         return entityManager.createQuery("from ScheduleEntity s where s.idGuide = :guide_id")
-                            .setParameter("guide_id", guide_id).getResultList();
+                .setParameter("guide_id", guide_id).getResultList();
     }
 
     public boolean authorize(int user_id, int password_hash){

@@ -1,32 +1,17 @@
 package com;
 
-import com.beans.DBInterface;
-import com.entity.ExcursionEntity;
+import com.vaadin.cdi.CDIUI;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.Button;
-import com.vaadin.ui.Grid;
-import com.vaadin.ui.UI;
+import com.vaadin.ui.*;
 
-import javax.ejb.EJB;
+@CDIUI
+public class DragonPark extends UI {
 
-
-public class DragonPark extends UI{
-
-    private Grid<ExcursionEntity> excursionGrid = new Grid<>(ExcursionEntity.class);
-
-
-    @EJB//(lookup = "java:global/course_war/DBInterfaceBean!com.beans.DBInterface")
-    private static DBInterface dbInterface;
 
     @Override
     public void init(VaadinRequest request) {
-        getPage().setTitle("Dragon Park");
-        setContent(new Button("Hey!", event -> Call()));
+        VerticalLayout layout = new VerticalLayout();
+        setContent(layout);
+        layout.addComponent(new Label("Hello, world!"));
     }
-
-    private void Call(){
-        dbInterface.getAllExcursions();
-    }
-
-
 }

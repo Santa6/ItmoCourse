@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="Deltaspike 1.8.0">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/modules" />
+      <root url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/core" />
+      <root url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/modules" />
+      <root url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/cdictrl" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/deltaspike-data-module-api-1.8.0-sources.jar!/" />
+    </SOURCES>
+    <jarDirectory url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/cdictrl" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/core" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/modules" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/lib/deltaspike-full-1.8.0/modules" recursive="false" />
+  </library>
+</component>
