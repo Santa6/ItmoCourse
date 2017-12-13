@@ -13,6 +13,8 @@
       <root url="jar://$PROJECT_DIR$/lib/deltaspike-core-api-1.7.2.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ideaLibSources/vaadin-cdi-2.0.0-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
