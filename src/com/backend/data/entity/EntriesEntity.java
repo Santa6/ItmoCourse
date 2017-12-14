@@ -10,7 +10,7 @@ public class EntriesEntity {
     private Integer idSchedule;
 
     @Id
-    @Column(name = "id", nullable = true)
+    @Column(name = "id", nullable = false)
     public Integer getId() {
         return id;
     }
@@ -20,7 +20,7 @@ public class EntriesEntity {
     }
 
     @Basic
-    @Column(name = "e_mail", nullable = true, length = -1)
+    @Column(name = "e_mail", nullable = false, length = -1)
     public String geteMail() {
         return eMail;
     }
@@ -30,7 +30,7 @@ public class EntriesEntity {
     }
 
     @Basic
-    @Column(name = "id_schedule", nullable = true)
+    @Column(name = "id_schedule", nullable = false)
     public Integer getIdSchedule() {
         return idSchedule;
     }

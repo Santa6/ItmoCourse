@@ -11,7 +11,7 @@ public class EmployeeEntity {
     private Boolean isguide;
 
     @Id
-    @Column(name = "id", nullable = true)
+    @Column(name = "id", nullable = false)
     public Integer getId() {
         return id;
     }
@@ -21,7 +21,7 @@ public class EmployeeEntity {
     }
 
     @Basic
-    @Column(name = "name", nullable = true, length = 80)
+    @Column(name = "name", nullable = false, length = 80)
     public String getName() {
         return name;
     }
@@ -31,7 +31,7 @@ public class EmployeeEntity {
     }
 
     @Basic
-    @Column(name = "password_hash", nullable = true)
+    @Column(name = "password_hash", nullable = false)
     public Integer getPasswordHash() {
         return passwordHash;
     }
@@ -41,7 +41,7 @@ public class EmployeeEntity {
     }
 
     @Basic
-    @Column(name = "isguide", nullable = true)
+    @Column(name = "isguide", nullable = false)
     public Boolean getIsguide() {
         return isguide;
     }

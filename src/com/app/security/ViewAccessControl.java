@@ -6,6 +6,7 @@ import com.vaadin.navigator.View;
 
 import javax.annotation.security.DenyAll;
 import javax.annotation.security.RolesAllowed;
+import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
 import java.io.Serializable;
 
@@ -37,5 +38,4 @@ public class ViewAccessControl implements Serializable{
         // No annotation (or PermitAll) defined, everyone is allowed
         return true;
     }
-}
 }

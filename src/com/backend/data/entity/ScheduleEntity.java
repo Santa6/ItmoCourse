@@ -5,34 +5,23 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "schedule", schema = "s225127", catalog = "studs")
-@NamedQuery(name="Schedule.GetAll", query = "select excursions from ScheduleEntity excursions")
 public class ScheduleEntity {
-    private int id;
-    private String name;
+    private Integer id;
     private Timestamp beginning;
     private Timestamp ending;
-    private int excursionId;
-    private int idGuide;
-    private int maxEntries;
+    private Integer excursionId;
+    private Integer idGuide;
+    private Integer maxEntries;
+    private String name;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
-    }
-
-    @Basic
-    @Column(name="name", nullable = false)
-    public String getName(){
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 
     @Basic
@@ -57,32 +46,42 @@ public class ScheduleEntity {
 
     @Basic
     @Column(name = "excursion_id", nullable = false)
-    public int getExcursionId() {
+    public Integer getExcursionId() {
         return excursionId;
     }
 
-    public void setExcursionId(int excursionId) {
+    public void setExcursionId(Integer excursionId) {
         this.excursionId = excursionId;
     }
 
     @Basic
     @Column(name = "id_guide", nullable = false)
-    public int getIdGuide() {
+    public Integer getIdGuide() {
         return idGuide;
     }
 
-    public void setIdGuide(int idGuide) {
+    public void setIdGuide(Integer idGuide) {
         this.idGuide = idGuide;
     }
 
     @Basic
     @Column(name = "max_entries", nullable = false)
-    public int getMaxEntries() {
+    public Integer getMaxEntries() {
         return maxEntries;
     }
 
-    public void setMaxEntries(int maxEntries) {
+    public void setMaxEntries(Integer maxEntries) {
         this.maxEntries = maxEntries;
+    }
+
+    @Basic
+    @Column(name = "name", nullable = false, length = 20)
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     @Override
@@ -92,24 +91,26 @@ public class ScheduleEntity {
 
         ScheduleEntity that = (ScheduleEntity) o;
 
-        if (id != that.id) return false;
-        if (excursionId != that.excursionId) return false;
-        if (idGuide != that.idGuide) return false;
-        if (maxEntries != that.maxEntries) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (beginning != null ? !beginning.equals(that.beginning) : that.beginning != null) return false;
         if (ending != null ? !ending.equals(that.ending) : that.ending != null) return false;
+        if (excursionId != null ? !excursionId.equals(that.excursionId) : that.excursionId != null) return false;
+        if (idGuide != null ? !idGuide.equals(that.idGuide) : that.idGuide != null) return false;
+        if (maxEntries != null ? !maxEntries.equals(that.maxEntries) : that.maxEntries != null) return false;
+        if (name != null ? !name.equals(that.name) : that.name != null) return false;
 
         return true;
     }
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (beginning != null ? beginning.hashCode() : 0);
         result = 31 * result + (ending != null ? ending.hashCode() : 0);
-        result = 31 * result + excursionId;
-        result = 31 * result + idGuide;
-        result = 31 * result + maxEntries;
+        result = 31 * result + (excursionId != null ? excursionId.hashCode() : 0);
+        result = 31 * result + (idGuide != null ? idGuide.hashCode() : 0);
+        result = 31 * result + (maxEntries != null ? maxEntries.hashCode() : 0);
+        result = 31 * result + (name != null ? name.hashCode() : 0);
         return result;
     }
 }

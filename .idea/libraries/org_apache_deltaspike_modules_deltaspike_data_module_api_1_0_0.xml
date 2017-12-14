@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="org.apache.deltaspike.modules:deltaspike-data-module-api:1.0.0" type="repository">
+    <properties maven-id="org.apache.deltaspike.modules:deltaspike-data-module-api:1.0.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/deltaspike-data-module-api-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/deltaspike-core-api-1.0.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/deltaspike-partial-bean-module-api-1.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

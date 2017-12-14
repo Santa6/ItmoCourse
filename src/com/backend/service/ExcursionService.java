@@ -2,47 +2,50 @@ package com.backend.service;
 
 import com.ExcursionRepository;
 import com.backend.data.entity.ExcursionEntity;
-import com.vaadin.data.provider.QuerySortOrder;
-import org.apache.deltaspike.data.api.EntityRepository;
+
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 import java.util.List;
-import java.util.Optional;
-import java.util.stream.Stream;
+
 
 @Stateless
-public class ExcursionService extends CrudService<ExcursionEntity>{
-    private final ExcursionRepository excursionRepository;
-
-    public ExcursionService(){
-        excursionRepository= null;
-    }
+public class ExcursionService{
 
     @Inject
-    public ExcursionService(ExcursionRepository excursionRepository){
-        this.excursionRepository = excursionRepository;
+    private ExcursionRepository excursionRepository;
+
+    public ExcursionService(){
+
     }
 
-    @Override
-    public void delete(Integer excursionId){
-        super.delete(excursionId);
+    public void save(ExcursionEntity entry){
+        excursionRepository.save(entry);
     }
 
-    @Override
-    protected EntityRepository<ExcursionEntity, Integer> getRepository() {
-        return null;
+    public List<ExcursionEntity> findByName(String filter){
+        return excursionRepository.findByNameLikeIgnoreCase(filter);
     }
 
-    @Override
-    public long countAnyMatching(Optional<String> filter) {
-        return 0;
-    }
-
-    @Override
-    public Stream<ExcursionEntity> findAnyMatching(Optional<String> filter, int offset, int limit, List<QuerySortOrder> sortOrders) {
-        return null;
-    }
+//    @Override
+//    public void delete(Integer excursionId){
+//        super.delete(excursionId);
+//    }
+//
+//    @Override
+//    protected EntityRepository<ExcursionEntity, Integer> getRepository() {
+//        return null;
+//    }
+//
+//    @Override
+//    public long countAnyMatching(Optional<String> filter) {
+//        return 0;
+//    }
+//
+//    @Override
+//    public Stream<ExcursionEntity> findAnyMatching(Optional<String> filter, int offset, int limit, List<QuerySortOrder> sortOrders) {
+//        return null;
+//    }
 
 //    private void throwIfExcursionLocked(Integer excursionId){
 //        if (excursionId == null){

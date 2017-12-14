@@ -71,7 +71,7 @@ public class MainView extends MainViewDesign implements ViewDisplay {
     @Override
     public void showView(View view) {
         content.removeAllComponents();
-        content.addComponent(view.getViewComponent());
+//        content.addComponent(view.getViewComponent());
 
         navigationButtons.forEach((viewClass, button) -> button.setStyleName("selected", viewClass == view.getClass()));
 
@@ -94,7 +94,7 @@ public class MainView extends MainViewDesign implements ViewDisplay {
             ui.getPage().reload();
         };
 
-        navigationManager.runAfterLeaveConfirmation(doLogout);
+//        navigationManager.runAfterLeaveConfirmation(doLogout);
     }
 
 }

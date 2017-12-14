@@ -4,20 +4,19 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "dragon", schema = "s225127", catalog = "studs")
-@NamedQuery(name="Dragons.GetAll", query = "select dragons from DragonEntity dragons")
 public class DragonEntity {
-    private int id;
+    private Integer id;
     private String name;
     private String description;
     private String photo;
 
     @Id
     @Column(name = "id", nullable = false)
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -58,7 +57,7 @@ public class DragonEntity {
 
         DragonEntity that = (DragonEntity) o;
 
-        if (id != that.id) return false;
+        if (id != null ? !id.equals(that.id) : that.id != null) return false;
         if (name != null ? !name.equals(that.name) : that.name != null) return false;
         if (description != null ? !description.equals(that.description) : that.description != null) return false;
         if (photo != null ? !photo.equals(that.photo) : that.photo != null) return false;
@@ -68,7 +67,7 @@ public class DragonEntity {
 
     @Override
     public int hashCode() {
-        int result = id;
+        int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
         result = 31 * result + (description != null ? description.hashCode() : 0);
         result = 31 * result + (photo != null ? photo.hashCode() : 0);

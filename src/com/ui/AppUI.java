@@ -1,41 +1,26 @@
 package com.ui;
 
-import com.ui.navigation.NavigationManager;
+import com.backend.UserSession;
 import com.vaadin.annotations.Title;
 import com.vaadin.annotations.Viewport;
 import com.vaadin.cdi.CDIUI;
-import com.vaadin.cdi.CDIViewProvider;
-import com.vaadin.server.DefaultErrorHandler;
 import com.vaadin.server.VaadinRequest;
-import com.vaadin.ui.UI;
-import com.app.HasLogger;
+import org.vaadin.cdiviewmenu.ViewMenuUI;
+
+import javax.inject.Inject;
 
 
 @CDIUI("")
 @Title("Dragon Park")
 @Viewport("width=device-width,initial-scale=1.0,user-scalable=no")
-public class AppUI extends UI implements HasLogger{
-    private final CDIViewProvider viewProvider;
-    private final NavigationManager navigationManager;
-    private final MainView mainView;
+public class AppUI extends ViewMenuUI{
 
-    public AppUI(CDIViewProvider viewProvider, NavigationManager navigationManager, MainView mainView){
-        this.viewProvider = viewProvider;
-        this.navigationManager = navigationManager;
-        this.mainView = mainView;
-    }
+    @Inject
+    UserSession userSession;
 
     @Override
-    protected void init(VaadinRequest vaadinRequest) {
-        navigationManager.init(this, mainView, viewProvider);
+    protected void init(VaadinRequest request) {
+        super.init(request);
 
-        setErrorHandler(event -> {
-            Throwable t = DefaultErrorHandler.findRelevantThrowable(event.getThrowable());
-            getLogger().error("Error during request", t);
-        });
-
-        setContent(mainView);
-
-        navigationManager.navigateToDefaultView();
     }
 }
