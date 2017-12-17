@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="cdi-helpers-2.2">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/lib/cdi-helpers-2.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
