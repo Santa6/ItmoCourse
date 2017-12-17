@@ -26,8 +26,8 @@ public class LoginView extends MVerticalLayout implements View {
     @Inject
     EmployeeRepository repository;
 
-    private MTextField id = new MTextField("id");
-    private MPasswordField password = new MPasswordField("password");
+    private MTextField id = new MTextField("id").withRequired(true);
+    private MPasswordField password = new MPasswordField("password").withRequired(true);
     private MButton loginButton = new MButton("Login");
     private MButton logoutButton = new MButton("Logout");
 
@@ -51,7 +51,16 @@ public class LoginView extends MVerticalLayout implements View {
                     loginButton
             );
             loginButton.addClickListener(e -> {
-                boolean logged = session.login(longId(), passwordHash());
+                Long longId;
+                boolean logged;
+                try{
+                    longId = Long.parseLong(id.getValue());
+                    logged = session.login(longId, password.getValue());
+                }catch (NumberFormatException exc){
+                    Notification.show("ID can only have digits!");
+                    logged = false;
+                }
+
                 if (logged) {
                     ViewMenuUI.getMenu().navigateTo(DragonsView.class);
                 }
@@ -60,13 +69,5 @@ public class LoginView extends MVerticalLayout implements View {
                 }
             });
         }
-    }
-
-    private Integer passwordHash() {
-        return password.getValue().hashCode();
-    }
-
-    private Long longId() {
-        return Long.parseLong(id.getValue());
     }
 }

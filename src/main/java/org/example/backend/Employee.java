@@ -10,7 +10,7 @@ public class Employee extends AbstractEntity{
     @Id
     private Long id;
     private String name;
-    private Integer passwordHash;
+    private String password;
     private Boolean isguide;
 
     @Column(name = "id", nullable = false)
@@ -34,12 +34,12 @@ public class Employee extends AbstractEntity{
 
     @Basic
     @Column(name = "password_hash", nullable = false)
-    public Integer getPasswordHash() {
-        return passwordHash;
+    public String getPassword() {
+        return password;
     }
 
-    public void setPasswordHash(Integer passwordHash) {
-        this.passwordHash = passwordHash;
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Basic
@@ -61,7 +61,7 @@ public class Employee extends AbstractEntity{
 
         if (id != null ? !id.equals(employee.id) : employee.id != null) return false;
         if (name != null ? !name.equals(employee.name) : employee.name != null) return false;
-        if (passwordHash != null ? !passwordHash.equals(employee.passwordHash) : employee.passwordHash != null)
+        if (password != null ? !password.equals(employee.password) : employee.password != null)
             return false;
         if (isguide != null ? !isguide.equals(employee.isguide) : employee.isguide != null) return false;
 
@@ -72,7 +72,7 @@ public class Employee extends AbstractEntity{
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (passwordHash != null ? passwordHash.hashCode() : 0);
+        result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (isguide != null ? isguide.hashCode() : 0);
         return result;
     }

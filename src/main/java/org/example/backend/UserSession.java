@@ -75,10 +75,10 @@ public class UserSession implements Serializable {
         setUser(null);
     }
 
-    public boolean login(Long id, Integer passwordHash){
+    public boolean login(Long id, String password){
         try{
             user = facade.findById(id);
-            if (!Objects.equals(user.getPasswordHash(), passwordHash)){
+            if (!Objects.equals(user.getPassword(), password)){
                 user = null;
             }
             return isLoggedIn();
