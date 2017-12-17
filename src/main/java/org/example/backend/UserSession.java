@@ -1,14 +1,12 @@
 package org.example.backend;
 
-import java.io.Serializable;
+import org.example.backend.service.EmployeeFacade;
+
 import javax.annotation.PostConstruct;
 import javax.enterprise.context.SessionScoped;
 import javax.inject.Inject;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.deltaspike.core.api.config.ConfigResolver;
-import org.example.backend.exampleservice.InvoicerFacade;
-import org.example.backend.exampleservice.ProductFacade;
-import org.example.backend.exampleservice.UserFacade;
+import java.io.Serializable;
+import java.util.Objects;
 
 /**
  *
@@ -16,62 +14,56 @@ import org.example.backend.exampleservice.UserFacade;
  */
 @SessionScoped
 public class UserSession implements Serializable {
-
     @Inject
-    UserFacade userFacade;
+    EmployeeFacade facade;
 
-    @Inject
-    InvoicerFacade invoicerFacade;
-
-    @Inject
-    ProductFacade productFacade;
-
-    private User user;
+    private Employee user;
 
     @PostConstruct
     public void init() {
-        final String propertyValue = ConfigResolver.getPropertyValue(
-                "jpa-invoicer.gpluskey");
-        // If no Google OAuth API key available, use fake login
-        if (StringUtils.isEmpty(propertyValue)) {
-            demoLogin();
-        }
+//        final String propertyValue = ConfigResolver.getPropertyValue(
+//                "jpa-invoicer.gpluskey");
+//        // If no Google OAuth API key available, use fake login
+//        if (StringUtils.isEmpty(propertyValue)) {
+//            demoLogin();
+//        }
     }
 
-    protected void demoLogin() {
-        final String email = "matti.meikalainen@gmail.com";
-        this.user = userFacade.findByEmail(email);
-        if (user == null) {
-            this.user = userFacade.save(new User(email));
+//    protected void demoLogin() {
+//        final String email = "matti.meikalainen@gmail.com";
+//        user = new Employee();
+//        this.user = userFacade.findByEmail(email);
+//        if (user == null) {
+//            this.user = userFacade.save(new User(email));
+//
+//            Invoicer invoicer = new Invoicer();
+//            invoicer.setName("Matin pummpu ja imu");
+//            invoicer.setAddress("Ruukinkatu 4, 20100 Turku");
+//            invoicer.setBankAccount("FI1234567890");
+//            invoicer.setEmail("matti@pumppu.fi");
+//            invoicer.setPhone("+34567890");
+//            invoicer.getAdministrators().add(this.user);
+//            this.user.getAdministrates().add(invoicer);
+//            invoicer = invoicerFacade.save(invoicer);
+//            Product product = new Product();
+//            product.setName("Pumppu");
+//            product.setPrice(30.0);
+//            product.setInvoicer(invoicer);
+//            productFacade.save(product);
+//            product = new Product();
+//            product.setName("Imuri");
+//            product.setPrice(60.0);
+//            product.setInvoicer(invoicer);
+//            productFacade.save(product);
+//
+//        }
+//    }
 
-            Invoicer invoicer = new Invoicer();
-            invoicer.setName("Matin pummpu ja imu");
-            invoicer.setAddress("Ruukinkatu 4, 20100 Turku");
-            invoicer.setBankAccount("FI1234567890");
-            invoicer.setEmail("matti@pumppu.fi");
-            invoicer.setPhone("+34567890");
-            invoicer.getAdministrators().add(this.user);
-            this.user.getAdministrates().add(invoicer);
-            invoicer = invoicerFacade.save(invoicer);
-            Product product = new Product();
-            product.setName("Pumppu");
-            product.setPrice(30.0);
-            product.setInvoicer(invoicer);
-            productFacade.save(product);
-            product = new Product();
-            product.setName("Imuri");
-            product.setPrice(60.0);
-            product.setInvoicer(invoicer);
-            productFacade.save(product);
-
-        }
-    }
-
-    public User getUser() {
+    public Employee getUser() {
         return user;
     }
 
-    public void setUser(User user) {
+    public void setUser(Employee user) {
         this.user = user;
     }
 
@@ -79,15 +71,31 @@ public class UserSession implements Serializable {
         return user != null;
     }
 
-    public void login(String email, String displayName) {
-        try {
-            user = userFacade.findByEmail(email);
-        } catch (Exception e) {
-        }
-        if (user == null) {
-            userFacade.save(new User(email));
-            user = userFacade.findByEmail(email);
+    public void logout() {
+        setUser(null);
+    }
+
+    public boolean login(Long id, Integer passwordHash){
+        try{
+            user = facade.findById(id);
+            if (!Objects.equals(user.getPasswordHash(), passwordHash)){
+                user = null;
+            }
+            return isLoggedIn();
+        } catch (Exception e){
+            return false;
         }
     }
+
+//    public void login(String email, String displayName) {
+//        try {
+//            user = userFacade.findByEmail(email);
+//        } catch (Exception e) {
+//        }
+//        if (user == null) {
+//            userFacade.save(new User(email));
+//            user = userFacade.findByEmail(email);
+//        }
+//    }
 
 }

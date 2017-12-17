@@ -101,7 +101,7 @@ public class LoginWindow extends Window implements RequestHandler {
             GooglePlusAnswer answer = new Gson().fromJson(resp.getBody(),
                     GooglePlusAnswer.class);
 
-            userSession.login(answer.emails[0].value, answer.displayName);
+//            userSession.login(answer.emails[0].value, answer.displayName);
 
             close();
             VaadinSession.getCurrent().removeRequestHandler(this);

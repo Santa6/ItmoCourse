@@ -5,8 +5,8 @@ import org.apache.deltaspike.data.api.EntityRepository;
 import org.apache.deltaspike.data.api.Repository;
 
 @Repository(forEntity = Employee.class)
-public interface EmployeeRepository extends EntityRepository<Employee, Integer>{
+public interface EmployeeRepository extends EntityRepository<Employee, Long>{
 
-    public Employee findById(Integer id);
+    Employee findById(Long id);
 
 }

@@ -1,5 +1,7 @@
 package org.example.backend.service;
 
+import org.example.backend.Employee;
+
 import javax.ejb.Stateless;
 import javax.inject.Inject;
 
@@ -9,4 +11,7 @@ public class EmployeeFacade {
     private EmployeeRepository repository;
 
 
+    public Employee findById(Long id) {
+        return repository.findById(id);
+    }
 }

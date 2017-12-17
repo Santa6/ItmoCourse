@@ -11,7 +11,7 @@ import org.vaadin.viritin.label.RichText;
 import org.vaadin.viritin.layouts.MVerticalLayout;
 
 @CDIView("")
-@ViewMenuItem(icon = FontAwesome.LIFE_BOUY, order = ViewMenuItem.BEGINNING)
+@ViewMenuItem(icon = FontAwesome.HOME, order = ViewMenuItem.BEGINNING)
 public class AboutView extends MVerticalLayout implements View {
     
     @PostConstruct

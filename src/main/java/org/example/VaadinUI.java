@@ -15,7 +15,7 @@ import org.vaadin.cdiviewmenu.ViewMenuUI;
 
 @CDIUI("")
 @Theme("valo")
-@Title("Invoicer")
+@Title("Dragon Park")
 public class VaadinUI extends ViewMenuUI {
 
     @Inject
@@ -27,10 +27,10 @@ public class VaadinUI extends ViewMenuUI {
     @Override
     protected void init(VaadinRequest request) {
         super.init(request);
-        if (!userSession.isLoggedIn()) {
-            getContent().setVisible(false);
-            addWindow(loginWindow.get());
-        }
+//        if (!userSession.isLoggedIn()) {
+//            getContent().setVisible(false);
+//            addWindow(loginWindow.get());
+//        }
     }
 
     @Override

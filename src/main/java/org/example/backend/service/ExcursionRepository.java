@@ -7,6 +7,6 @@ import org.example.backend.Excursion;
 import java.util.List;
 
 @Repository(forEntity = Excursion.class)
-public interface ExcursionRepository extends EntityRepository<Excursion, Integer> {
+public interface ExcursionRepository extends EntityRepository<Excursion, Long> {
     public List<Excursion> findByNameLikeIgnoreCase(String name);
 }
