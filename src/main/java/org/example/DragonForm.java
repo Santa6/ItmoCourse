@@ -15,11 +15,11 @@ import org.vaadin.viritin.layouts.MVerticalLayout;
 @ViewScoped
 public class DragonForm extends AbstractForm<Dragon>{
 
-    MTextField name = new MTextField("Name");
+    private MTextField name = new MTextField("Name");
 
-    MTextArea description = new MTextArea("Description");
+    private MTextArea description = new MTextArea("Description");
 
-    Image photo = new Image();
+    private Image photo = new Image();
 
 
     @Override

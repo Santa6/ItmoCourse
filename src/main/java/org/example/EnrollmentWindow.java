@@ -18,17 +18,17 @@ import java.util.List;
 public class EnrollmentWindow extends Window{
 
     @Inject
-    EntryFacade entryFacade;
+    private EntryFacade entryFacade;
 
     @Inject
-    ScheduleFacade facade;
+    private ScheduleFacade facade;
 
     @Inject
-    PaymentWindow window;
+    private PaymentWindow window;
 
     private Excursion entity;
 
-    MTable<Schedule> table= new MTable<>(Schedule.class)
+    private MTable<Schedule> table = new MTable<>(Schedule.class)
             .withFullWidth()
             .withHeight("20%")
             .withProperties("beginning", "ending")

@@ -27,15 +27,15 @@ import javax.inject.Inject;
 public class ExcursionsView extends MVerticalLayout implements View {
 
     @Inject
-    ExcursionFacade facade;
+    private ExcursionFacade facade;
 
     @Inject
-    ExcursionForm form;
+    private ExcursionForm form;
 
     @Inject
-    UserSession session;
+    private UserSession session;
 
-    MTable<Excursion> table = new MTable<>(Excursion.class)
+    private MTable<Excursion> table = new MTable<>(Excursion.class)
             .withFullWidth()
             .withProperties("name", "description", "active")
             .withColumnHeaders("Name", "Description", "Active")
@@ -93,7 +93,7 @@ public class ExcursionsView extends MVerticalLayout implements View {
         table.setBeans(facade.findAll());
     }
 
-    public void save(Excursion entity) {
+    private void save(Excursion entity) {
         facade.save(entity);
         Notification.show("Saved!");
         form.getPopup().close();

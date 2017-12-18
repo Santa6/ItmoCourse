@@ -5,21 +5,17 @@ import com.vaadin.cdi.CDIView;
 import com.vaadin.navigator.View;
 import com.vaadin.navigator.ViewChangeListener;
 import com.vaadin.server.FontAwesome;
-import javax.annotation.PostConstruct;
-import javax.inject.Inject;
-
-import com.vaadin.shared.ui.MarginInfo;
-import com.vaadin.ui.Alignment;
 import com.vaadin.ui.UI;
-import com.vaadin.ui.Window;
 import org.example.backend.Excursion;
 import org.example.backend.service.ExcursionFacade;
 import org.vaadin.cdiviewmenu.ViewMenuItem;
 import org.vaadin.viritin.fields.MTable;
 import org.vaadin.viritin.label.RichText;
 import org.vaadin.viritin.layouts.MCssLayout;
-import org.vaadin.viritin.layouts.MHorizontalLayout;
 import org.vaadin.viritin.layouts.MVerticalLayout;
+
+import javax.annotation.PostConstruct;
+import javax.inject.Inject;
 
 @CDIView("")
 @ViewMenuItem(icon = FontAwesome.HOME, order = ViewMenuItem.BEGINNING)

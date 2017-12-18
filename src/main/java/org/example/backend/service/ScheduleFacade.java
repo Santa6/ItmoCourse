@@ -10,7 +10,7 @@ import java.util.List;
 public class ScheduleFacade {
 
     @Inject
-    ScheduleRepository repository;
+    private ScheduleRepository repository;
 
     public List<Schedule> findByExcursionId(Long id) {
         return repository.findByExcursionIdOrderByBeginning(id);

@@ -13,6 +13,7 @@ public class PaymentWindow extends Window{
     private Schedule entity;
 
     @Inject
+    private
     EntryFacade facade;
 
     @PostConstruct

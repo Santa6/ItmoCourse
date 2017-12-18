@@ -10,7 +10,7 @@ import java.util.List;
 public class DragonFacade {
 
     @Inject
-    DragonRepository repository;
+    private DragonRepository repository;
 
     public void remove(Dragon dragon){
         repository.remove(repository.findBy(dragon.getId()));

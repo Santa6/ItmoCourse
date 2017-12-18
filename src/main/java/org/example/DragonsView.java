@@ -27,16 +27,16 @@ import javax.inject.Inject;
 public class DragonsView extends MVerticalLayout implements View{
 
     @Inject
-    DragonFacade facade;
+    private DragonFacade facade;
 
     @Inject
-    DragonForm form;
+    private DragonForm form;
 
     @Inject
-    UserSession session;
+    private UserSession session;
 
 
-    MTable<Dragon> table = new MTable<>(Dragon.class)
+    private MTable<Dragon> table = new MTable<>(Dragon.class)
             .withFullWidth()
             .withProperties("name", "description")
             .withColumnHeaders("Name", "Description")
@@ -94,7 +94,7 @@ public class DragonsView extends MVerticalLayout implements View{
         table.setBeans(facade.findAll());
     }
 
-    public void save(Dragon entity) {
+    private void save(Dragon entity) {
         facade.save(entity);
         Notification.show("Saved!");
         form.getPopup().close();

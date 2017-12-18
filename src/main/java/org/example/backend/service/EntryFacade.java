@@ -7,7 +7,7 @@ import javax.inject.Inject;
 public class EntryFacade  {
 
     @Inject
-    EntryRepository repository;
+    private EntryRepository repository;
 
     public Long countBySchedule(Long schedule){
         return repository.countBySchedule(schedule);

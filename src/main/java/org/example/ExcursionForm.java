@@ -13,10 +13,10 @@ import org.vaadin.viritin.layouts.MVerticalLayout;
 
 public class ExcursionForm extends AbstractForm<Excursion> {
 
-    MTextField name = new MTextField("Name");
-    MTextField description = new MTextField("Description");
-    Image photo = new Image();
-    MCheckBox active = new MCheckBox("Active");
+    private MTextField name = new MTextField("Name");
+    private MTextField description = new MTextField("Description");
+    private Image photo = new Image();
+    private MCheckBox active = new MCheckBox("Active");
 
     @Override
     protected Component createContent() {
