@@ -10,7 +10,7 @@ public class Entries extends AbstractEntity{
     @Id
     private Long id;
     private String eMail;
-    private Integer idSchedule;
+    private Long schedule;
 
     @Column(name = "id", nullable = false)
     public Long getId() {
@@ -33,12 +33,12 @@ public class Entries extends AbstractEntity{
 
     @Basic
     @Column(name = "id_schedule", nullable = false)
-    public Integer getIdSchedule() {
-        return idSchedule;
+    public Long getSchedule() {
+        return schedule;
     }
 
-    public void setIdSchedule(Integer idSchedule) {
-        this.idSchedule = idSchedule;
+    public void setSchedule(Long idSchedule) {
+        this.schedule = idSchedule;
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Entries extends AbstractEntity{
 
         if (id != null ? !id.equals(entries.id) : entries.id != null) return false;
         if (eMail != null ? !eMail.equals(entries.eMail) : entries.eMail != null) return false;
-        if (idSchedule != null ? !idSchedule.equals(entries.idSchedule) : entries.idSchedule != null) return false;
+        if (schedule != null ? !schedule.equals(entries.schedule) : entries.schedule != null) return false;
 
         return true;
     }
@@ -59,7 +59,7 @@ public class Entries extends AbstractEntity{
     public int hashCode() {
         int result = id != null ? id.hashCode() : 0;
         result = 31 * result + (eMail != null ? eMail.hashCode() : 0);
-        result = 31 * result + (idSchedule != null ? idSchedule.hashCode() : 0);
+        result = 31 * result + (schedule != null ? schedule.hashCode() : 0);
         return result;
     }
 }

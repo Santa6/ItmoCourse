@@ -4,9 +4,10 @@ import org.example.backend.Employee;
 
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import java.io.Serializable;
 
 @Stateless
-public class EmployeeFacade {
+public class EmployeeFacade implements Serializable{
     @Inject
     private EmployeeRepository repository;
 

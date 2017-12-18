@@ -12,9 +12,9 @@ public class Schedule extends AbstractEntity{
     private Long id;
     private Timestamp beginning;
     private Timestamp ending;
-    private Integer excursionId;
+    private Long excursionId;
     private Integer idGuide;
-    private Integer maxEntries;
+    private Long maxEntries;
     private String name;
 
     @Column(name = "id", nullable = false)
@@ -48,11 +48,11 @@ public class Schedule extends AbstractEntity{
 
     @Basic
     @Column(name = "excursion_id", nullable = false)
-    public Integer getExcursionId() {
+    public Long getExcursionId() {
         return excursionId;
     }
 
-    public void setExcursionId(Integer excursionId) {
+    public void setExcursionId(Long excursionId) {
         this.excursionId = excursionId;
     }
 
@@ -68,11 +68,11 @@ public class Schedule extends AbstractEntity{
 
     @Basic
     @Column(name = "max_entries", nullable = false)
-    public Integer getMaxEntries() {
+    public Long getMaxEntries() {
         return maxEntries;
     }
 
-    public void setMaxEntries(Integer maxEntries) {
+    public void setMaxEntries(Long maxEntries) {
         this.maxEntries = maxEntries;
     }
 
