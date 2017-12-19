@@ -39,7 +39,7 @@ public class EnrollmentWindow extends Window{
     public void init(){
         setModal(true);
         setResponsive(true);
-        setResizable(true);
+        setResizable(false);
         center();
         setHeight("60%");
     }
