@@ -5,6 +5,7 @@ import com.vaadin.ui.Label;
 import com.vaadin.ui.Notification;
 import com.vaadin.ui.Window;
 import org.example.backend.Entries;
+import org.example.backend.Mail;
 import org.example.backend.Schedule;
 import org.example.backend.service.EntryFacade;
 import org.vaadin.viritin.button.MButton;
@@ -47,6 +48,7 @@ public class PaymentWindow extends Window{
         buyButton.setIcon(FontAwesome.MONEY);
         buyButton.addClickListener(e -> {
             buy();
+            new Mail().SendEmailToWithId(email.getValue(), generatedId);
             close();
         });
         setModal(true);
