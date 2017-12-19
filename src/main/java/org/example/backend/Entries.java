@@ -12,6 +12,7 @@ public class Entries extends AbstractEntity{
     private String eMail;
     private Long schedule;
     private Long generated;
+    private Long count;
 
     @Column(name = "id", nullable = false)
     public Long getId() {
@@ -72,5 +73,15 @@ public class Entries extends AbstractEntity{
 
     public void setGenerated(Long generated) {
         this.generated = generated;
+    }
+
+    @Basic
+    @Column(name = "count", nullable = false)
+    public Long getCount() {
+        return count;
+    }
+
+    public void setCount(Long count) {
+        this.count = count;
     }
 }

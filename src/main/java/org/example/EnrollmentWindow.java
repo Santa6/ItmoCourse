@@ -13,6 +13,7 @@ import org.vaadin.viritin.layouts.MVerticalLayout;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
+import java.util.Iterator;
 import java.util.List;
 
 public class EnrollmentWindow extends Window{
@@ -51,6 +52,7 @@ public class EnrollmentWindow extends Window{
         table.addMValueChangeListener(e -> {
             if (e.getValue() != null){
                 window.setCaption("Sign up for an excursion");
+                window.close();
                 UI.getCurrent().addWindow(window);
                 window.setSchedule(e.getValue());
                 this.close();
@@ -62,11 +64,10 @@ public class EnrollmentWindow extends Window{
 
     private void listEntities(){
         List<Schedule> list = facade.findByExcursionId(entity.getId());
-        for (Schedule schedule: list) {
-            if (schedule.getMaxEntries() <= entryFacade.countBySchedule(schedule.getId())){
-                list.remove(schedule);
-            }
-        }
+        list.removeIf(schedulePredicate -> {
+            Long count = entryFacade.countBySchedule(schedulePredicate.getId());
+            return schedulePredicate.getMaxEntries() <= (count == null? 0: count);
+        });
         table.setBeans(list);
     }
 }

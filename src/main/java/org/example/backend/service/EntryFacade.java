@@ -13,7 +13,7 @@ public class EntryFacade  {
     private EntryRepository repository;
 
     public Long countBySchedule(Long schedule){
-        return repository.countByScheduleEqual(schedule);
+        return (Long) repository.countByScheduleEqual(schedule).get(0);
     }
 
     public List<Entries> findByGenerated(Long generated){
@@ -26,5 +26,9 @@ public class EntryFacade  {
 
     public void remove(Entries entry) {
         repository.remove(entry);
+    }
+
+    public void save(Entries entity) {
+        repository.save(entity);
     }
 }

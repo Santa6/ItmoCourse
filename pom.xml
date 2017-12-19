@@ -14,8 +14,8 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <!-- Your key and secret here, to profile or to elsewhere so that it
         is available for delta spike properties.        -->
-        <jpa-invoicer.gpluskey></jpa-invoicer.gpluskey>
-        <jpa-invoicer.gplussecret></jpa-invoicer.gplussecret>
+        <jpa-invoicer.gpluskey/>
+        <jpa-invoicer.gplussecret/>
         <jpa-invoicer.smtp.hostname>localhost</jpa-invoicer.smtp.hostname>
         <jpa-invoicer.smtp.port>9090</jpa-invoicer.smtp.port>
         <jpa-invoicer.smtp.from>invoicer@vaadin.com</jpa-invoicer.smtp.from>
@@ -30,7 +30,7 @@
             <version>1.16</version>
             <type>pom</type>
             <!--<exclusions>-->
-                <!--&lt;!&ndash; Using add-ons in this example via cdn-->
+                <!--&lt;!&ndash; Using save-ons in this example via cdn-->
                 <!--exclude default widgetset &ndash;&gt;-->
                 <!--<exclusion>-->
                     <!--<groupId>com.vaadin</groupId>-->

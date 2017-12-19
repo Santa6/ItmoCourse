@@ -10,8 +10,8 @@ import java.util.List;
 
 @Repository(forEntity = Entries.class)
 public interface EntryRepository extends EntityRepository<Entries, Integer> {
-    @Query("select count(*) from Entries e where e.schedule = ?1")
-    Long countByScheduleEqual(Long schedule);
+    @Query("select sum(e.count) from Entries e where e.schedule = ?1")
+    List countByScheduleEqual(Long schedule);
 
     List<Entries> findByGenerated(Long generated);
 
