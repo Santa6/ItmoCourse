@@ -6,6 +6,7 @@ import com.vaadin.ui.Image;
 import com.vaadin.ui.Window;
 import org.example.backend.Excursion;
 import org.vaadin.viritin.fields.MCheckBox;
+import org.vaadin.viritin.fields.MTextArea;
 import org.vaadin.viritin.fields.MTextField;
 import org.vaadin.viritin.form.AbstractForm;
 import org.vaadin.viritin.label.Header;
@@ -14,7 +15,7 @@ import org.vaadin.viritin.layouts.MVerticalLayout;
 public class ExcursionForm extends AbstractForm<Excursion> {
 
     private MTextField name = new MTextField("Name");
-    private MTextField description = new MTextField("Description");
+    private MTextArea description = new MTextArea("Description");
     private Image photo = new Image();
     private MCheckBox active = new MCheckBox("Active");
 

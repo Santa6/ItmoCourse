@@ -40,10 +40,9 @@ public class AboutView extends MVerticalLayout implements View {
 
     @PostConstruct
     void init() {
-        MCssLayout layout = new MCssLayout(tableLayout, aboutInfo);
-        aboutInfo.setWidth("300px");
+        MCssLayout layout = new MCssLayout(tableLayout, new MVerticalLayout(aboutInfo).withWidth("450px"));
         tableLayout.setWidth(15, Unit.EM);
-        tableLayout.setHeight(40, Unit.EM);
+        tableLayout.setHeight(30, Unit.EM);
         add(
                 layout
         );

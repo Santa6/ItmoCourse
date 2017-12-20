@@ -34,6 +34,8 @@ public class PaymentWindow extends Window{
     private MButton minus = new MButton();
     private MButton plus = new MButton();
 
+    private Label label = new Label("How many tickets?");
+
     private MButton buyButton = new MButton();
 
     private MHorizontalLayout buyLayout = new MHorizontalLayout();
@@ -96,7 +98,7 @@ public class PaymentWindow extends Window{
         setContent(layout);
 
         buyLayout.add(
-                new Label("How many tickets?"),
+                label,
                 minus,
                 counterLabel,
                 plus

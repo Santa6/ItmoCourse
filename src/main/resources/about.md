@@ -1,12 +1,6 @@
-# A simple Invoicer application built using Java EE and Vaadin
+# Welcome to our Dragon Park Site
 
-This application is built as an example application for Vaadin UI framework
-and various Java EE technologies. Still it should be perfectly usable as such
-in a real use.
+If you're a visitor, you can order tickets for excursions or cancel your orders. If you're our employee you can manage stuff here.
 
-To get it running, you'll need Google app key and OAuth settings for it.
-
-
-The source code for this example is available 
-[from github](https://github.com/mstahv/jpa-invoicer).
+Have fun!
 
