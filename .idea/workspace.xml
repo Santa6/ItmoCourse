@@ -7,10 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0031f81f-651b-4b9d-a3c4-4a8687a08860" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/Excursion.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/Excursion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -31,28 +31,6 @@
     <expand>
       <path>
         <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="PostgreSQL - studs@pg" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="PostgreSQL - studs@pg" type="e3449647:DbNodeDescriptor" />
-        <item name="studs" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="PostgreSQL - studs@pg" type="e3449647:DbNodeDescriptor" />
-        <item name="studs" type="e3449647:DbNodeDescriptor" />
-        <item name="s225127" type="e3449647:DbNodeDescriptor" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
-        <item name="PostgreSQL - studs@pg" type="e3449647:DbNodeDescriptor" />
-        <item name="studs" type="e3449647:DbNodeDescriptor" />
-        <item name="s225127" type="e3449647:DbNodeDescriptor" />
-        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-      </path>
-      <path>
-        <item name="" type="eadb38e5:DatabaseStructure$Root" />
         <item name="studs@localhost" type="e3449647:DbNodeDescriptor" />
       </path>
       <path>
@@ -79,7 +57,7 @@
         <item name="studs" type="e3449647:DbNodeDescriptor" />
         <item name="s225127" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
-        <item name="employee" type="e3449647:DbNodeDescriptor" />
+        <item name="excursion" type="e3449647:DbNodeDescriptor" />
       </path>
     </expand>
     <select />
@@ -90,7 +68,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/org/example/AboutView.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="11" />
+              <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="11" />
               <folding />
             </state>
           </provider>
@@ -106,7 +84,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Mail.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Mail.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -121,22 +99,55 @@
       <file leaf-file-name="RestService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="690">
+              <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#895#896#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
+                <element signature="e#952#953#0" expanded="true" />
+                <element signature="e#1010#1011#0" expanded="true" />
+                <element signature="e#1179#1180#0" expanded="true" />
+                <element signature="e#1315#1316#0" expanded="true" />
+                <element signature="e#1355#1356#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RESTRoot.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java">
+      <file leaf-file-name="Excursion.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Excursion.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+            <state relative-caret-position="120">
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Dragon.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AbstractEntity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/AbstractEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="164">
+              <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Employee.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Employee.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -176,21 +187,17 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/UserFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/MyAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Excursion.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/exampleservice/ContactFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/exampleservice/InvoiceFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/exampleservice/InvoicerFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/CdiConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/DragonRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/AbstractEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/auth/LoginWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/ExcursionFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/ExcursionRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/EmployeeRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/DragonView.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/ExcursionView.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Employee.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/EmployeeFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/UserSession.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/EnrollmentForm.java" />
@@ -219,8 +226,12 @@
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/RestService.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java" />
-        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/AbstractEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Excursion.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Employee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java" />
       </list>
     </option>
   </component>
@@ -546,7 +557,7 @@
       <workItem from="1513451946275" duration="3323000" />
       <workItem from="1513515815659" duration="18272000" />
       <workItem from="1513587680275" duration="13792000" />
-      <workItem from="1513667253521" duration="30828000" />
+      <workItem from="1513667253521" duration="31828000" />
     </task>
     <task id="LOCAL-00001" summary="converted to maven project">
       <created>1513516090062</created>
@@ -618,11 +629,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513784994748</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="jax-rs login">
+      <created>1513788816941</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1513788816952</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="66215000" />
+    <option name="totallyTimeSpent" value="67215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -682,7 +700,8 @@
     <MESSAGE value="отправка писем через JavaMailApi" />
     <MESSAGE value="почта отдельным потоком" />
     <MESSAGE value="правки дизайна" />
-    <option name="LAST_COMMIT_MESSAGE" value="правки дизайна" />
+    <MESSAGE value="jax-rs login" />
+    <option name="LAST_COMMIT_MESSAGE" value="jax-rs login" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -716,38 +735,6 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/ExcursionFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/EmployeeFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="9" column="51" lean-forward="false" selection-start-line="9" selection-start-column="51" selection-end-line="9" selection-end-column="51" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/DragonFacade.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/ExcursionsView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -802,14 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/AbstractEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="403">
-          <caret line="45" column="8" lean-forward="false" selection-start-line="45" selection-start-column="8" selection-end-line="45" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1042,7 +1021,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/AboutView.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="23" column="11" lean-forward="true" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="11" />
+          <caret line="23" column="11" lean-forward="false" selection-start-line="23" selection-start-column="4" selection-end-line="23" selection-end-column="11" />
           <folding />
         </state>
       </provider>
@@ -1113,6 +1092,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -1125,23 +1114,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="690">
+          <caret line="46" column="0" lean-forward="false" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#895#896#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1010#1011#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1315#1316#0" expanded="true" />
+            <element signature="e#1355#1356#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/AbstractEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+        <state relative-caret-position="164">
+          <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Excursion.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Employee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="10" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/af7f5e3e/ad6c2f6b-036f-46f9-a30b-93b647d207b3/studs.s225127.dragon">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Dragon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="20" lean-forward="false" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+          <folding />
         </state>
       </provider>
     </entry>
