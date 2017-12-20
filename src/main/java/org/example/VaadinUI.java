@@ -22,7 +22,7 @@ public class VaadinUI extends ViewMenuUI {
 
     @Override
     public void beforeClientResponse(boolean initial) {
-        workaroundForFirefoxIssue(initial);
+//        workaroundForFirefoxIssue(initial);
         super.beforeClientResponse(initial);
     }
 

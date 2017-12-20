@@ -48,7 +48,9 @@ public class PaymentWindow extends Window{
         buyButton.setIcon(FontAwesome.MONEY);
         buyButton.addClickListener(e -> {
             buy();
-            new Mail().SendEmailToWithId(email.getValue(), generatedId);
+            Mail myMail = new Mail(email.getValue(), generatedId);
+            Thread mailThread = new Thread(myMail);
+            mailThread.start();
             close();
         });
         setModal(true);
@@ -68,7 +70,8 @@ public class PaymentWindow extends Window{
 
     private void changeCounter(int i) {
         if (i == 1) {
-            if (counter < (entity.getMaxEntries() - facade.countBySchedule(entity.getId()))){
+            Long count = facade.countBySchedule(entity.getId());
+            if (counter < (entity.getMaxEntries() - (count == null? 0: count))){
                 counter += 1;
             }
             else Notification.show("No more places available!");

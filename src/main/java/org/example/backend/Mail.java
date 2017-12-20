@@ -6,8 +6,17 @@ import javax.mail.internet.MimeMessage;
 import java.util.Date;
 import java.util.Properties;
 
-public class Mail {
-    public void SendEmailToWithId(String adress, Long id){
+public class Mail implements Runnable{
+    private String address;
+    private Long id;
+
+    public Mail(String adress, Long id){
+        this.address = adress;
+        this.id = id;
+
+    }
+
+    public void run(){
         String from = "dragonpark@bk.ru";
         String host = "smtp.mail.ru";
         int port = 465;
@@ -40,7 +49,7 @@ public class Mail {
 
             // Установка атрибутов сообщения
             msg.setFrom(new InternetAddress(from));
-            InternetAddress[] address = {new InternetAddress(adress)};
+            InternetAddress[] address = {new InternetAddress(this.address)};
             msg.setRecipients(Message.RecipientType.TO, address);
             msg.setSubject("Your order at Dragon Park");
             msg.setSentDate(new Date());
