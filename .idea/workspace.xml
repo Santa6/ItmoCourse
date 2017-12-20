@@ -7,11 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0031f81f-651b-4b9d-a3c4-4a8687a08860" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/AboutView.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/AboutView.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/ExcursionForm.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/ExcursionForm.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/PaymentWindow.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/PaymentWindow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/about.md" afterPath="$PROJECT_DIR$/src/main/resources/about.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java" afterPath="$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -74,6 +73,14 @@
         <item name="s225127" type="e3449647:DbNodeDescriptor" />
         <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
       </path>
+      <path>
+        <item name="" type="eadb38e5:DatabaseStructure$Root" />
+        <item name="studs@localhost" type="e3449647:DbNodeDescriptor" />
+        <item name="studs" type="e3449647:DbNodeDescriptor" />
+        <item name="s225127" type="e3449647:DbNodeDescriptor" />
+        <item name="" type="fce03ad6:DatabaseStructure$GroupNode" />
+        <item name="employee" type="e3449647:DbNodeDescriptor" />
+      </path>
     </expand>
     <select />
   </component>
@@ -102,8 +109,34 @@
       <file leaf-file-name="Mail.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
+            <state relative-caret-position="225">
               <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RestService.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#895#896#0" expanded="true" />
+                <element signature="e#935#936#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RESTRoot.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -175,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/EntryRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/EntryFacade.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/EnrollmentWindow.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/VaadinUI.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
@@ -183,6 +215,11 @@
         <option value="$PROJECT_DIR$/src/main/resources/about.md" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/PaymentWindow.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/AboutView.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/LoginEndpoint.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/RestService.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java" />
+        <option value="$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java" />
         <option value="$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java" />
       </list>
     </option>
@@ -286,7 +323,17 @@
             <path>
               <item name="invoicer" type="b2602c69:ProjectViewProjectNode" />
               <item name="code" type="462c0819:PsiDirectoryNode" />
-              <item name="target" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="invoicer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="code" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="webapp" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -499,7 +546,7 @@
       <workItem from="1513451946275" duration="3323000" />
       <workItem from="1513515815659" duration="18272000" />
       <workItem from="1513587680275" duration="13792000" />
-      <workItem from="1513667253521" duration="27702000" />
+      <workItem from="1513667253521" duration="30828000" />
     </task>
     <task id="LOCAL-00001" summary="converted to maven project">
       <created>1513516090062</created>
@@ -564,11 +611,18 @@
       <option name="project" value="LOCAL" />
       <updated>1513751113430</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="правки дизайна">
+      <created>1513784994748</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1513784994748</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63089000" />
+    <option name="totallyTimeSpent" value="66215000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -627,11 +681,12 @@
     <MESSAGE value="покупка билетов" />
     <MESSAGE value="отправка писем через JavaMailApi" />
     <MESSAGE value="почта отдельным потоком" />
-    <option name="LAST_COMMIT_MESSAGE" value="почта отдельным потоком" />
+    <MESSAGE value="правки дизайна" />
+    <option name="LAST_COMMIT_MESSAGE" value="правки дизайна" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="28" />
+      <option name="time" value="30" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -661,52 +716,6 @@
     <option name="serverIp" value="localhost" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/vaadin/viritin/1.58/viritin-1.58-sources.jar!/org/vaadin/viritin/fields/MTable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="474" column="14" lean-forward="false" selection-start-line="474" selection-start-column="14" selection-end-line="474" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/vaadin/cdi-helpers/1.14/cdi-helpers-1.14-sources.jar!/org/vaadin/cdiviewmenu/ViewMenuUI.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="65">
-          <caret line="17" column="13" lean-forward="false" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/vaadin/vaadin-shared/7.7.4/vaadin-shared-7.7.4.jar!/com/vaadin/shared/ui/MarginInfo.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="27" column="11" lean-forward="false" selection-start-line="27" selection-start-column="11" selection-end-line="27" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/vaadin/viritin/1.58/viritin-1.58-sources.jar!/org/vaadin/viritin/layouts/MVerticalLayout.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="40" column="27" lean-forward="false" selection-start-line="40" selection-start-column="27" selection-end-line="40" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/DragonsView.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="96" column="4" lean-forward="false" selection-start-line="96" selection-start-column="4" selection-end-line="96" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/DragonForm.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-62">
-          <caret line="21" column="20" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/ExcursionFacade.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -736,13 +745,6 @@
         <state relative-caret-position="75">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/af7f5e3e/ad6c2f6b-036f-46f9-a30b-93b647d207b3/studs.s225127.employee">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -977,17 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="25" lean-forward="false" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.intellij.javaee.oss.jboss.editor.JBossWebRootProvider">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$MAVEN_REPOSITORY$/javax/javaee-web-api/7.0/javaee-web-api-7.0.pom">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="451">
@@ -1030,14 +1021,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="256">
-          <caret line="167" column="14" lean-forward="false" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/EnrollmentWindow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="463">
@@ -1072,9 +1055,89 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="167" column="14" lean-forward="false" selection-start-line="167" selection-start-column="14" selection-end-line="167" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/ws/rs/core/MediaType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="115" column="31" lean-forward="false" selection-start-line="115" selection-start-column="31" selection-end-line="115" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/ws/rs/ApplicationPath.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="64" column="18" lean-forward="false" selection-start-line="64" selection-start-column="18" selection-end-line="64" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/jboss-web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="40" lean-forward="false" selection-start-line="2" selection-start-column="40" selection-end-line="2" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.javaee.oss.jboss.editor.JBossWebRootProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="das://table:/af7f5e3e/ad6c2f6b-036f-46f9-a30b-93b647d207b3/studs.s225127.employee">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/ws/rs/Consumes.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="67" column="18" lean-forward="false" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/javax/javaee-api/7.0/javaee-api-7.0-sources.jar!/javax/ws/rs/Path.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="90" column="18" lean-forward="false" selection-start-line="90" selection-start-column="18" selection-end-line="90" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RESTRoot.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="18" lean-forward="true" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/service/RestService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="22" lean-forward="false" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#895#896#0" expanded="true" />
+            <element signature="e#935#936#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/org/example/backend/Mail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
+        <state relative-caret-position="225">
           <caret line="41" column="55" lean-forward="false" selection-start-line="41" selection-start-column="55" selection-end-line="41" selection-end-column="55" />
           <folding>
             <element signature="imports" expanded="true" />
